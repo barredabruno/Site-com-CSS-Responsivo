@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.sobre-imagem {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sobre-texto {
+    flex: 2;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; /* Evita que o conteúdo saia do container */
+    
+}
+
+.produto img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o limite do produto */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        flex-direction: column;
+    }
+
+    .sobre-imagem {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+}
+
+
+.btn-carrinho {
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave para a mudança de cor e efeito de transformação */
+}
+
+.btn-carrinho:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
+
